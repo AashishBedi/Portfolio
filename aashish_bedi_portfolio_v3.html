@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Aashish Bedi — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0f1e3c;--navy-mid:#1a2f5a;--accent:#2e7dfc;--accent-soft:#e8f1ff;
+  --gold:#e8a020;--gold-soft:#fff8e8;--text:#1a1a2e;--muted:#64748b;
+  --border:#e2e8f0;--bg:#ffffff;--surface:#f8fafc;--radius:12px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--bg);line-height:1.6;font-size:15px}
+
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+.nav-brand{font-family:'DM Serif Display',serif;font-size:20px;color:var(--navy);text-decoration:none}
+.nav-links{display:flex;gap:1.5rem;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--accent)}
+
+#hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 60%,#1e3a8a 100%);color:white;padding:5rem 2rem 4rem;position:relative;overflow:hidden}
+#hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(46,125,252,.15) 0%,transparent 60%)}
+.hero-inner{max-width:860px;margin:0 auto;position:relative;z-index:1;display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:center}
+.hero-photo{width:160px;height:160px;border-radius:50%;border:3px solid rgba(147,197,253,.4);object-fit:cover;object-position:center top;box-shadow:0 0 0 6px rgba(46,125,252,.15)}
+.hero-tag{display:inline-block;background:rgba(46,125,252,.2);color:#93c5fd;font-size:12px;font-weight:600;letter-spacing:.08em;padding:4px 12px;border-radius:20px;border:1px solid rgba(147,197,253,.3);margin-bottom:1.25rem;text-transform:uppercase}
+#hero h1{font-family:'DM Serif Display',serif;font-size:clamp(2.2rem,4vw,3.2rem);line-height:1.1;margin-bottom:.75rem;color:#fff}
+#hero h1 em{color:#93c5fd;font-style:italic}
+.hero-sub{font-size:1rem;color:rgba(255,255,255,.7);max-width:500px;margin-bottom:2rem;line-height:1.7}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.btn-primary{background:var(--accent);color:white;padding:10px 22px;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none;transition:background .2s,transform .15s;display:inline-flex;align-items:center;gap:6px}
+.btn-primary:hover{background:#1a6ee8;transform:translateY(-1px)}
+.btn-ghost{background:rgba(255,255,255,.1);color:rgba(255,255,255,.9);padding:10px 22px;border-radius:8px;font-size:14px;font-weight:500;text-decoration:none;border:1px solid rgba(255,255,255,.2);transition:background .2s;display:inline-flex;align-items:center;gap:6px}
+.btn-ghost:hover{background:rgba(255,255,255,.18)}
+.hero-stats{display:flex;gap:2rem;margin-top:2.5rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.12);flex-wrap:wrap}
+.stat-num{font-family:'DM Serif Display',serif;font-size:1.8rem;color:#fff;line-height:1}
+.stat-label{font-size:12px;color:rgba(255,255,255,.55);margin-top:2px}
+
+section{padding:4rem 2rem}
+section:nth-child(even){background:var(--surface)}
+.section-inner{max-width:860px;margin:0 auto}
+.section-label{font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--accent);text-transform:uppercase;margin-bottom:.4rem}
+.section-title{font-family:'DM Serif Display',serif;font-size:1.9rem;color:var(--navy);margin-bottom:2rem}
+
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.about-text p{color:var(--muted);line-height:1.8;margin-bottom:1rem;font-size:15px}
+.about-highlights{display:flex;flex-direction:column;gap:12px}
+.highlight-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.25rem;display:flex;align-items:flex-start;gap:12px}
+.highlight-card h4{font-size:14px;font-weight:600;color:var(--navy)}
+.highlight-card p{font-size:13px;color:var(--muted);margin-top:2px}
+
+/* PROJECTS */
+.projects-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+.project-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:1.4rem;transition:box-shadow .2s,transform .2s;position:relative;overflow:hidden;display:flex;flex-direction:column}
+.project-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.ac-blue::before{background:var(--accent)}
+.ac-gold::before{background:var(--gold)}
+.ac-green::before{background:#22c55e}
+.ac-purple::before{background:#8b5cf6}
+.ac-coral::before{background:#f97316}
+.ac-teal::before{background:#14b8a6}
+.ac-rose::before{background:#f43f5e}
+.ac-indigo::before{background:#6366f1}
+.ac-emerald::before{background:#10b981}
+.project-card:hover{box-shadow:0 4px 20px rgba(0,0,0,.08);transform:translateY(-2px)}
+.project-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.5rem;gap:8px}
+.project-title{font-weight:700;font-size:15px;color:var(--navy);flex:1}
+.project-badge{font-size:10px;font-weight:700;letter-spacing:.05em;padding:3px 8px;border-radius:20px;text-transform:uppercase;white-space:nowrap;flex-shrink:0}
+.b-new{background:#dcfce7;color:#14532d}
+.b-research{background:var(--gold-soft);color:#8a5c00}
+.b-bigdata{background:#e0f2fe;color:#0c4a6e}
+.b-hack{background:#f3e8ff;color:#5b21b6}
+.b-ml{background:#fce7f3;color:#9d174d}
+.b-nlp{background:#ecfdf5;color:#065f46}
+.project-desc{font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:.9rem;flex:1}
+.project-stack{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:.9rem}
+.stack-tag{font-size:11px;font-weight:500;color:var(--muted);background:var(--surface);border:1px solid var(--border);padding:2px 8px;border-radius:4px}
+.project-link{font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;display:inline-flex;align-items:center;gap:4px;margin-top:auto}
+.project-link:hover{text-decoration:underline}
+
+/* SKILLS */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1rem}
+.skill-category{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem}
+.skill-cat-title{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:.8rem}
+.skill-tags{display:flex;flex-wrap:wrap;gap:6px}
+.skill-tag{font-size:12px;font-weight:500;padding:3px 10px;border-radius:20px}
+.st-blue{background:var(--accent-soft);color:#1a5fcc}
+.st-gold{background:var(--gold-soft);color:#8a5c00}
+.st-green{background:#e8f5e9;color:#1b5e20}
+.st-purple{background:#f3e8ff;color:#5b21b6}
+
+/* CP */
+.cp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.cp-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;text-align:center;text-decoration:none;color:inherit;transition:box-shadow .2s,transform .2s;display:block}
+.cp-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.08);transform:translateY(-2px)}
+.cp-logo{font-size:2rem;margin-bottom:.5rem}
+.cp-platform{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:.25rem}
+.cp-stat{font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--accent)}
+.cp-sub{font-size:12px;color:var(--muted);margin-top:2px}
+
+/* EXPERIENCE */
+.exp-item{display:grid;grid-template-columns:120px 1fr;gap:1.5rem;margin-bottom:2rem}
+.exp-date{font-size:13px;color:var(--muted);font-weight:500;padding-top:3px}
+.exp-content{border-left:2px solid var(--border);padding-left:1.5rem;position:relative}
+.exp-content::before{content:'';position:absolute;left:-5px;top:6px;width:8px;height:8px;border-radius:50%;background:var(--accent);border:2px solid white;box-shadow:0 0 0 2px var(--accent)}
+.exp-role{font-weight:700;font-size:15px;color:var(--navy)}
+.exp-org{font-size:13px;color:var(--accent);margin-bottom:.6rem}
+.exp-bullets{list-style:none}
+.exp-bullets li{font-size:13px;color:var(--muted);margin-bottom:5px;padding-left:14px;position:relative}
+.exp-bullets li::before{content:'→';position:absolute;left:0;color:var(--accent);font-size:11px;top:2px}
+
+/* AWARDS */
+.awards-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.award-card{display:flex;gap:1rem;align-items:flex-start;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem}
+.award-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.award-title{font-weight:700;font-size:14px;color:var(--navy)}
+.award-desc{font-size:13px;color:var(--muted);margin-top:3px;line-height:1.5}
+
+#contact{background:var(--navy);color:white;text-align:center}
+#contact .section-label{color:#93c5fd}
+#contact .section-title{color:white}
+#contact p{color:rgba(255,255,255,.65);margin-bottom:2rem;font-size:15px}
+.contact-links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.contact-link{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);color:rgba(255,255,255,.9);padding:10px 20px;border-radius:8px;font-size:14px;font-weight:500;text-decoration:none;border:1px solid rgba(255,255,255,.15);transition:background .2s}
+.contact-link:hover{background:rgba(255,255,255,.18)}
+
+footer{text-align:center;padding:1.5rem;font-size:13px;color:var(--muted);border-top:1px solid var(--border);background:var(--bg)}
+
+@media(max-width:640px){
+  .hero-inner{grid-template-columns:1fr;gap:1.5rem}
+  .hero-photo{width:110px;height:110px}
+  .about-grid,.projects-grid,.awards-grid,.cp-grid{grid-template-columns:1fr}
+  .exp-item{grid-template-columns:1fr;gap:.4rem}
+  #hero,section{padding:3rem 1.25rem}
+  nav{padding:0 1rem}
+  .nav-links{gap:1rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#hero" class="nav-brand">Aashish Bedi</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag">Open to ML · AI · SDE Roles</div>
+      <h1>Aashish Bedi<br/><em>AI & ML Engineer</em></h1>
+      <p class="hero-sub">Building end-to-end intelligent systems — RAG architectures, Big Data pipelines, and full-stack AI applications. 3× Springer-indexed research. Top-5 at an international AI Hackathon.</p>
+      <div class="hero-ctas">
+        <a href="mailto:aashishbedi0@gmail.com" class="btn-primary">✉ Get in Touch</a>
+        <a href="https://github.com/AashishBedi" target="_blank" class="btn-ghost">⌥ GitHub</a>
+        <a href="https://linkedin.com/in/aashish-bedi-1a799b252" target="_blank" class="btn-ghost">in LinkedIn</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="stat-num">3×</div><div class="stat-label">Springer Publications</div></div>
+        <div><div class="stat-num">818+</div><div class="stat-label">LeetCode Problems</div></div>
+        <div><div class="stat-num">Top 5</div><div class="stat-label">Intl. AI Hackathon</div></div>
+        <div><div class="stat-num">9</div><div class="stat-label">GitHub Projects</div></div>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:flex-end;align-items:center">
+      <img src="https://github.com/AashishBedi.png" alt="Aashish Bedi" class="hero-photo" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22><circle cx=%2280%22 cy=%2280%22 r=%2280%22 fill=%22%232e7dfc%22/><text x=%2280%22 y=%2296%22 text-anchor=%22middle%22 font-size=%2260%22 fill=%22white%22 font-family=%22sans-serif%22>AB</text></svg>'"/>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <div class="section-label">About</div>
+    <div class="section-title">Who I am</div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I'm a Computer Science graduate from Lovely Professional University with a deep focus on AI and ML Engineering. I enjoy turning research-grade ideas into production-ready systems — from intelligent RAG pipelines to scalable microservice backends.</p>
+        <p>My work spans the full stack: Python/FastAPI on the backend, React on the frontend, and PyTorch/Scikit-Learn for the ML layer. I've shipped everything from semantic job-matching engines to contract review bots and CLTV prediction apps.</p>
+        <p>Outside of code, I led a software team to a Top-5 finish at a UAE-based international AI hackathon, and hold peer-reviewed publications at 3 Springer-indexed conferences.</p>
+      </div>
+      <div class="about-highlights">
+        <div class="highlight-card">
+          <div style="width:36px;height:36px;border-radius:8px;background:#e8f1ff;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px">🎓</div>
+          <div><h4>B.Tech — CSE</h4><p>Lovely Professional University · CGPA 7.24 · 2022–2026</p></div>
+        </div>
+        <div class="highlight-card">
+          <div style="width:36px;height:36px;border-radius:8px;background:#fff8e8;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px">🏆</div>
+          <div><h4>Top-5 / 250+ teams — Intl. Hackathon</h4><p>AI for Sustainability · Canadian University, UAE</p></div>
+        </div>
+        <div class="highlight-card">
+          <div style="width:36px;height:36px;border-radius:8px;background:#e8f5e9;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px">📄</div>
+          <div><h4>3× Springer-indexed Research</h4><p>ICIDSSD 2026, Jamia Hamdard Delhi + 2 more</p></div>
+        </div>
+        <div class="highlight-card">
+          <div style="width:36px;height:36px;border-radius:8px;background:#f3e8ff;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px">📍</div>
+          <div><h4>Ludhiana, Punjab</h4><p>Open to remote & relocation</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-inner">
+    <div class="section-label">Work</div>
+    <div class="section-title">All Projects</div>
+    <div class="projects-grid">
+
+      <div class="project-card ac-blue">
+        <div class="project-header">
+          <div class="project-title">HireAI</div>
+          <span class="project-badge b-new">Latest</span>
+        </div>
+        <p class="project-desc">Production-grade AI job portal with semantic resume-to-job scoring via sentence-transformers, dual-role RBAC (Job Seeker & Recruiter), JWT auth, real-time skill gap analysis, PDF resume parsing, automated email notifications, and GitHub Actions CI pipeline.</p>
+        <div class="project-stack">
+          <span class="stack-tag">Spring Boot 3.5</span><span class="stack-tag">FastAPI</span><span class="stack-tag">React.js</span><span class="stack-tag">PostgreSQL</span><span class="stack-tag">Redis</span><span class="stack-tag">Docker</span><span class="stack-tag">sentence-transformers</span><span class="stack-tag">Java 21</span>
+        </div>
+        <a href="https://github.com/AashishBedi/HireAI" target="_blank" class="project-link">⌥ View on GitHub →</a>
+      </div>
+
+      <div class="project-card ac-gold">
+        <div class="project-header">
+          <div class="project-title">EduVerse AI</div>
+          <span class="project-badge b-research">Springer Published</span>
+        </div>
+        <p class="project-desc">Intent-aware hybrid RAG pipeline with ChromaDB + SQLite dual-store, enabling intelligent query routing. 40% improvement in AI response relevance via embedding-level tuning. ~2s end-to-end latency with Groq-hosted Llama inference.</p>
+        <div class="project-stack">
+          <span class="stack-tag">Python</span><span class="stack-tag">RAG</span><span class="stack-tag">ChromaDB</span><span class="stack-tag">FastAPI</span><span class="stack-tag">Groq/Llama</span><span class="stack-tag">SQLite</span>
+        </div>
+        <a href="https://github.com/AashishBedi/Eduverse_AI" target="_blank" class="project-link">⌥ View on GitHub →</a>
+      </div>
+
+      <div class="project-card ac-purple">
+        <div class="project-header">
+          <div class="project-title">Mitti Mantra</div>
+          <span class="project-badge b-hack">Top-5 Hackathon</span>
+        </div>
+        <p class="project-desc">AI for sustainability project — built as Software Lead at the International AI Hackathon hosted by Canadian University Dubai. Achieved Top-5 finish among 250+ competing teams globally.</p>
+        <div class="project-stack">
+          <span class="stack-tag">Python</span><span class="stack-tag">FastAPI</span><span class="stack-tag">React.js</span><span class="stack-tag">ML</span>
+        </div>
+        <a href="https://github.com/AashishBedi/Mittimantra" target="_blank" class="project-link">⌥ View on GitHub →</a>
+      </div>
+
+      <div class="project-card ac-teal">
+        <div class="project-header">
+          <div class="project-title">Zorvyn</div>
+          <span class="project-badge b-new">Active</span>
+        </div>
+        <p class="project-desc">An actively developed full-stack project built on a FastAPI and React stack — part of an expanding portfolio of production-grade AI-powered applications.</p>
+        <div class="project-stack">
+          <span class="stack-tag">FastAPI</span><span class="stack-tag">React.js</span><span class="stack-tag">Python</span>
+        </div>
+        <a href="https://github.com/AashishBedi/Zorvyn" target="_blank" class="project-link">⌥ View on GitHub →</a>
+      </div>
+
+      <div class="project-card ac-rose">
+        <div class="project-header">
+          <div class="project-title">Contract Document Review Bot</div>
+          <span class="project-badge b-nlp">NLP</span>
+        </div>
+        <p class="project-desc">An AI-powered bot for automated legal contract review — uses NLP and LLM capabilities to extract key clauses, flag risks, and summarise contract documents intelligently.</p>
+        <div class="project-stack">
+          <span class="stack-tag">Python</span><span class="stack-tag">NLP</span><span class="stack-tag">LLM</span><span class="stack-tag">FastAPI</span>
+        </div>
+        <a href="https://github.com/AashishBedi/Contract_Document_Review_Bot" target="_blank" class="project-link">⌥ View on GitHub →</a>
+      </div>
+
+      <div class="project-card ac-coral">
+        <div class="project-header">
+          <div class="project-title">MovieGold</div>
+          <span class="project-badge b-new">Web App</span>
+        </div>
+        <p class="project-desc">A full-stack movie discovery and browsing application — built with a modern frontend and backend stack for searching, exploring, and tracking films.</p>
+        <div class="project-stack">
+          <span class="stack-tag">React.js</span><span class="stack-tag">JavaScript</span><span class="stack-tag">REST API</span>
+        </div>
+        <a href="https://github.com/AashishBedi/MovieGold" target="_blank" class="project-link">⌥ View on GitHub →</a>
+      </div>
+
+      <div class="project-card ac-emerald">
+        <div class="project-header">
+          <div class="project-title">CLTV Prediction App</div>
+          <span class="project-badge b-ml">Hackathon · ML</span>
+        </div>
+        <p class="project-desc">Customer Lifetime Value prediction application built for the Vidhya Analytics Data Scientist Hiring Hackathon. End-to-end ML pipeline from feature engineering to model serving.</p>
+        <div class="project-stack">
+          <span class="stack-tag">Python</span><span class="stack-tag">Scikit-Learn</span><span class="stack-tag">Pandas</span><span class="stack-tag">ML Pipeline</span>
+        </div>
+        <a href="https://github.com/AashishBedi/CLTV_PredictionApp_VidhyaAnalyticsDataScientistHiringHackathon" target="_blank" class="project-link">⌥ View on GitHub →</a>
+      </div>
+
+      <div class="project-card ac-indigo">
+        <div class="project-header">
+          <div class="project-title">Movie Recommendation System</div>
+          <span class="project-badge b-ml">ML</span>
+        </div>
+        <p class="project-desc">A collaborative/content-based movie recommendation engine using similarity metrics and user preference modelling to surface personalised film suggestions.</p>
+        <div class="project-stack">
+          <span class="stack-tag">Python</span><span class="stack-tag">Scikit-Learn</span><span class="stack-tag">Pandas</span><span class="stack-tag">NumPy</span>
+        </div>
+        <a href="https://github.com/AashishBedi/Movie_Recommendation" target="_blank" class="project-link">⌥ View on GitHub →</a>
+      </div>
+
+      <div class="project-card ac-green" style="grid-column:1/-1">
+        <div class="project-header">
+          <div class="project-title">Forecasting — Big Data Analytics Pipeline</div>
+          <span class="project-badge b-bigdata">Internship</span>
+        </div>
+        <p class="project-desc">Apache Spark + Hive ETL pipelines centralising large-scale retail datasets into a Hadoop Data Lake, reducing data-to-insight latency by 20%. HBase integration for sub-second high-frequency metrics retrieval. Scikit-Learn forecasting models improving predictive accuracy by 15%.</p>
+        <div class="project-stack">
+          <span class="stack-tag">Apache Spark</span><span class="stack-tag">Hadoop</span><span class="stack-tag">Hive</span><span class="stack-tag">HBase</span><span class="stack-tag">Scikit-Learn</span><span class="stack-tag">Python</span><span class="stack-tag">SQL</span>
+        </div>
+        <a href="https://github.com/AashishBedi/Forecasting" target="_blank" class="project-link">⌥ View on GitHub →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-inner">
+    <div class="section-label">Skills</div>
+    <div class="section-title">Technical toolkit</div>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <div class="skill-cat-title">Languages</div>
+        <div class="skill-tags">
+          <span class="skill-tag st-blue">Python</span><span class="skill-tag st-blue">Java</span><span class="skill-tag st-blue">SQL</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="skill-cat-title">AI & ML</div>
+        <div class="skill-tags">
+          <span class="skill-tag st-gold">PyTorch</span><span class="skill-tag st-gold">TensorFlow</span><span class="skill-tag st-gold">RAG</span><span class="skill-tag st-gold">NLP</span><span class="skill-tag st-gold">Scikit-Learn</span><span class="skill-tag st-gold">LLMs</span><span class="skill-tag st-gold">Pandas</span><span class="skill-tag st-gold">NumPy</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="skill-cat-title">Backend</div>
+        <div class="skill-tags">
+          <span class="skill-tag st-blue">FastAPI</span><span class="skill-tag st-blue">Spring Boot</span><span class="skill-tag st-blue">REST APIs</span><span class="skill-tag st-blue">JWT</span><span class="skill-tag st-blue">Spring Security</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="skill-cat-title">Big Data</div>
+        <div class="skill-tags">
+          <span class="skill-tag st-green">Apache Spark</span><span class="skill-tag st-green">Hadoop</span><span class="skill-tag st-green">Hive</span><span class="skill-tag st-green">HBase</span><span class="skill-tag st-green">ETL</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="skill-cat-title">Databases</div>
+        <div class="skill-tags">
+          <span class="skill-tag st-purple">PostgreSQL</span><span class="skill-tag st-purple">Redis</span><span class="skill-tag st-purple">ChromaDB</span><span class="skill-tag st-purple">MongoDB</span><span class="skill-tag st-purple">SQLite</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="skill-cat-title">DevOps & Tools</div>
+        <div class="skill-tags">
+          <span class="skill-tag st-blue">Docker</span><span class="skill-tag st-blue">GitHub Actions</span><span class="skill-tag st-blue">CI/CD</span><span class="skill-tag st-blue">Git</span><span class="skill-tag st-blue">React.js</span><span class="skill-tag st-blue">Tableau</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CP -->
+<section>
+  <div class="section-inner">
+    <div class="section-label">Competitive Programming</div>
+    <div class="section-title">Coding profiles</div>
+    <div class="cp-grid">
+      <a class="cp-card" href="https://leetcode.com/u/ZeoRanger5/" target="_blank">
+        <div class="cp-logo">🟡</div>
+        <div class="cp-platform">LeetCode</div>
+        <div class="cp-stat">818+</div>
+        <div class="cp-sub">Problems Solved · Rank #37,432</div>
+        <div style="margin-top:8px;background:#dcfce7;color:#14532d;display:inline-block;padding:2px 10px;border-radius:20px;font-size:11px;font-weight:700">🔥 365-Day Badge</div>
+      </a>
+      <a class="cp-card" href="https://codeforces.com/profile/aashishbedi0" target="_blank">
+        <div class="cp-logo">🔵</div>
+        <div class="cp-platform">Codeforces</div>
+        <div class="cp-stat">54</div>
+        <div class="cp-sub">Problems Solved · Rating 357</div>
+      </a>
+      <a class="cp-card" href="https://www.hackerrank.com/profile/aashishbedi01" target="_blank">
+        <div class="cp-logo">🟢</div>
+        <div class="cp-platform">HackerRank</div>
+        <div class="cp-stat">Active</div>
+        <div class="cp-sub">aashishbedi01</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-inner">
+    <div class="section-label">Experience</div>
+    <div class="section-title">Work history</div>
+    <div class="exp-item">
+      <div class="exp-date">May – Jul 2024</div>
+      <div class="exp-content">
+        <div class="exp-role">Big Data & Analytics Engineer (Intern)</div>
+        <div class="exp-org">Lovely Professional University · Phagwara, Punjab</div>
+        <ul class="exp-bullets">
+          <li>Engineered Apache Spark and Hive ETL pipelines, reducing data-to-insight latency by 20%</li>
+          <li>Optimised SQL queries for inventory and sales aggregation driving weekly restocking decisions</li>
+          <li>Trained Scikit-Learn forecasting models improving predictive accuracy by 15%</li>
+          <li>Integrated HBase as low-latency NoSQL store enabling sub-second high-frequency metrics retrieval</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AWARDS -->
+<section>
+  <div class="section-inner">
+    <div class="section-label">Recognition</div>
+    <div class="section-title">Awards & Publications</div>
+    <div class="awards-grid">
+      <div class="award-card">
+        <div class="award-icon" style="background:#fff8e8">🏆</div>
+        <div>
+          <div class="award-title">Top-5 / 250+ Teams — International AI Hackathon</div>
+          <div class="award-desc">AI for Sustainability, Canadian University Dubai (UAE). Led software development for Mitti Mantra as Software Lead.</div>
+        </div>
+      </div>
+      <div class="award-card">
+        <div class="award-icon" style="background:#e8f1ff">📄</div>
+        <div>
+          <div class="award-title">3× Springer-Indexed Publications</div>
+          <div class="award-desc">"RoadMap: EduVerse AI Powered Learning Framework" — ICIDSSD 2026, Jamia Hamdard Delhi + 2 additional Springer-indexed conferences.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-label">Contact</div>
+    <div class="section-title">Let's build something</div>
+    <p>Actively seeking ML Engineering, AI Engineering, Data Science, or SDE roles.<br/>Feel free to reach out — I'd love to connect.</p>
+    <div class="contact-links">
+      <a href="mailto:aashishbedi0@gmail.com" class="contact-link">✉ aashishbedi0@gmail.com</a>
+      <a href="https://linkedin.com/in/aashish-bedi-1a799b252" target="_blank" class="contact-link">in LinkedIn</a>
+      <a href="https://github.com/AashishBedi" target="_blank" class="contact-link">⌥ GitHub</a>
+      <a href="tel:+917986240292" class="contact-link">📞 +91 79862 40292</a>
+    </div>
+  </div>
+</section>
+
+<footer>Built with care · Aashish Bedi © 2026</footer>
+
+</body>
+</html>
