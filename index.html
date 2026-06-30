@@ -91,15 +91,6 @@ section:nth-child(even){background:var(--surface)}
 .st-green{background:#e8f5e9;color:#1b5e20}
 .st-purple{background:#f3e8ff;color:#5b21b6}
 
-/* CP */
-.cp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-.cp-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;text-align:center;text-decoration:none;color:inherit;transition:box-shadow .2s,transform .2s;display:block}
-.cp-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.08);transform:translateY(-2px)}
-.cp-logo{font-size:2rem;margin-bottom:.5rem}
-.cp-platform{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:.25rem}
-.cp-stat{font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--accent)}
-.cp-sub{font-size:12px;color:var(--muted);margin-top:2px}
-
 /* EXPERIENCE */
 .exp-item{display:grid;grid-template-columns:120px 1fr;gap:1.5rem;margin-bottom:2rem}
 .exp-date{font-size:13px;color:var(--muted);font-weight:500;padding-top:3px}
@@ -131,7 +122,7 @@ footer{text-align:center;padding:1.5rem;font-size:13px;color:var(--muted);border
 @media(max-width:640px){
   .hero-inner{grid-template-columns:1fr;gap:1.5rem}
   .hero-photo{width:110px;height:110px}
-  .about-grid,.projects-grid,.awards-grid,.cp-grid{grid-template-columns:1fr}
+  .about-grid,.projects-grid,.awards-grid{grid-template-columns:1fr}
   .exp-item{grid-template-columns:1fr;gap:.4rem}
   #hero,section{padding:3rem 1.25rem}
   nav{padding:0 1rem}
@@ -147,27 +138,24 @@ footer{text-align:center;padding:1.5rem;font-size:13px;color:var(--muted);border
     <li><a href="#about">About</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#skills">Skills</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#experience">Experience</a></li>
   </ul>
 </nav>
 
-<!-- HERO -->
 <section id="hero">
   <div class="hero-inner">
     <div>
-      <div class="hero-tag">Open to ML · AI · SDE Roles</div>
-      <h1>Aashish Bedi<br/><em>AI & ML Engineer</em></h1>
-      <p class="hero-sub">Building end-to-end intelligent systems — RAG architectures, Big Data pipelines, and full-stack AI applications. 3× Springer-indexed research. Top-5 at an international AI Hackathon.</p>
+      <div class="hero-tag">Open to Java Developer & Backend Roles</div>
+      <h1>Aashish Bedi<br/><em>Java Developer</em></h1>
+      <p class="hero-sub">Computer Science graduate with strong hands-on experience building backend systems and full-stack web apps using Java, Spring Boot, and React. Accepted for research at 4 peer-reviewed venues including IEEE ACROSET 2026.</p>
       <div class="hero-ctas">
         <a href="mailto:aashishbedi0@gmail.com" class="btn-primary">✉ Get in Touch</a>
         <a href="https://github.com/AashishBedi" target="_blank" class="btn-ghost">⌥ GitHub</a>
-        <a href="https://linkedin.com/in/aashish-bedi-1a799b252" target="_blank" class="btn-ghost">in LinkedIn</a>
       </div>
       <div class="hero-stats">
-        <div><div class="stat-num">3×</div><div class="stat-label">Springer Publications</div></div>
-        <div><div class="stat-num">818+</div><div class="stat-label">LeetCode Problems</div></div>
-        <div><div class="stat-num">Top 5</div><div class="stat-label">Intl. AI Hackathon</div></div>
-        <div><div class="stat-num">9</div><div class="stat-label">GitHub Projects</div></div>
+        <div><div class="stat-num">4×</div><div class="stat-label">Conferences Accepted</div></div>
+        <div><div class="stat-num">Top 5</div><div class="stat-label">International Hackathon</div></div>
+        <div><div class="stat-num">7.37</div><div class="stat-label">B.Tech CGPA</div></div>
       </div>
     </div>
     <div style="display:flex;justify-content:flex-end;align-items:center">
@@ -176,288 +164,163 @@ footer{text-align:center;padding:1.5rem;font-size:13px;color:var(--muted);border
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
   <div class="section-inner">
     <div class="section-label">About</div>
     <div class="section-title">Who I am</div>
     <div class="about-grid">
       <div class="about-text">
-        <p>I'm a Computer Science graduate from Lovely Professional University with a deep focus on AI and ML Engineering. I enjoy turning research-grade ideas into production-ready systems — from intelligent RAG pipelines to scalable microservice backends.</p>
-        <p>My work spans the full stack: Python/FastAPI on the backend, React on the frontend, and PyTorch/Scikit-Learn for the ML layer. I've shipped everything from semantic job-matching engines to contract review bots and CLTV prediction apps.</p>
-        <p>Outside of code, I led a software team to a Top-5 finish at a UAE-based international AI hackathon, and hold peer-reviewed publications at 3 Springer-indexed conferences.</p>
+        <p>I am a Computer Science graduate from Lovely Professional University with a strong foundation in designing REST APIs, working with relational databases, and implementing secure access controls with Spring Security and JWT.</p>
+        <p>With an analytical approach to engineering, I have successfully bridged software engineering with academic research. My research papers have been accepted at 4 peer-reviewed venues, focusing on intent-aware hybrid retrieval mechanisms.</p>
+        <p>I am eager to bring my solid coding fundamentals, development skills, and problem-solving mindset to an entry-level Java Developer role.</p>
       </div>
       <div class="about-highlights">
         <div class="highlight-card">
           <div style="width:36px;height:36px;border-radius:8px;background:#e8f1ff;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px">🎓</div>
-          <div><h4>B.Tech — CSE</h4><p>Lovely Professional University · CGPA 7.24 · 2022–2026</p></div>
+          <div><h4>B.Tech — CSE</h4><p>Lovely Professional University · CGPA 7.37 · 2022–2026</p></div>
         </div>
         <div class="highlight-card">
           <div style="width:36px;height:36px;border-radius:8px;background:#fff8e8;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px">🏆</div>
-          <div><h4>Top-5 / 250+ teams — Intl. Hackathon</h4><p>AI for Sustainability · Canadian University, UAE</p></div>
+          <div><h4>Top-5 among 250+ teams</h4><p>AI for Sustainability Hackathon · Canadian University, UAE</p></div>
         </div>
         <div class="highlight-card">
           <div style="width:36px;height:36px;border-radius:8px;background:#e8f5e9;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px">📄</div>
-          <div><h4>3× Springer-indexed Research</h4><p>ICIDSSD 2026, Jamia Hamdard Delhi + 2 more</p></div>
+          <div><h4>4× Peer-Reviewed Research Venues</h4><p>IEEE ACROSET 2026 + 3 Springer-indexed conferences</p></div>
         </div>
         <div class="highlight-card">
           <div style="width:36px;height:36px;border-radius:8px;background:#f3e8ff;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px">📍</div>
-          <div><h4>Ludhiana, Punjab</h4><p>Open to remote & relocation</p></div>
+          <div><h4>Ludhiana, Punjab</h4><p>Open to opportunities</p></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects">
   <div class="section-inner">
     <div class="section-label">Work</div>
-    <div class="section-title">All Projects</div>
+    <div class="section-title">Featured Projects</div>
     <div class="projects-grid">
 
       <div class="project-card ac-blue">
         <div class="project-header">
-          <div class="project-title">HireAI</div>
-          <span class="project-badge b-new">Latest</span>
+          <div class="project-title">GiftGallery - Full-Stack ECommerce Platform</div>
+          <span class="project-badge b-new">Jun 2026 - Present</span>
         </div>
-        <p class="project-desc">Production-grade AI job portal with semantic resume-to-job scoring via sentence-transformers, dual-role RBAC (Job Seeker & Recruiter), JWT auth, real-time skill gap analysis, PDF resume parsing, automated email notifications, and GitHub Actions CI pipeline.</p>
+        <p class="project-desc">Engineered a production-ready platform with a Spring Boot REST API and React frontend. Implemented custom JWT interceptors for state management and role-based access control (RBAC) via Spring Security to shield sensitive administrative endpoints. Integrated Razorpay SDK and managed media distribution with Cloudinary.</p>
         <div class="project-stack">
-          <span class="stack-tag">Spring Boot 3.5</span><span class="stack-tag">FastAPI</span><span class="stack-tag">React.js</span><span class="stack-tag">PostgreSQL</span><span class="stack-tag">Redis</span><span class="stack-tag">Docker</span><span class="stack-tag">sentence-transformers</span><span class="stack-tag">Java 21</span>
+          <span class="stack-tag">Java</span><span class="stack-tag">Spring Boot</span><span class="stack-tag">React</span><span class="stack-tag">PostgreSQL</span><span class="stack-tag">Spring Security</span><span class="stack-tag">Tailwind CSS</span>
         </div>
-        <a href="https://github.com/AashishBedi/HireAI" target="_blank" class="project-link">⌥ View on GitHub →</a>
       </div>
 
       <div class="project-card ac-gold">
         <div class="project-header">
-          <div class="project-title">EduVerse AI</div>
-          <span class="project-badge b-research">Springer Published</span>
+          <div class="project-title">HireAI - AI-Powered Job Portal</div>
+          <span class="project-badge b-new">Apr 2026 - Jun 2026</span>
         </div>
-        <p class="project-desc">Intent-aware hybrid RAG pipeline with ChromaDB + SQLite dual-store, enabling intelligent query routing. 40% improvement in AI response relevance via embedding-level tuning. ~2s end-to-end latency with Groq-hosted Llama inference.</p>
+        <p class="project-desc">Built a deployed job platform running a Spring Boot backend alongside a separate FastAPI microservice handling resume-scoring logic over internal APIs. Configured dual-role access control over 10+ endpoints. Containerized the infrastructure using Docker Compose and established a automated GitHub Actions CI pipeline.</p>
         <div class="project-stack">
-          <span class="stack-tag">Python</span><span class="stack-tag">RAG</span><span class="stack-tag">ChromaDB</span><span class="stack-tag">FastAPI</span><span class="stack-tag">Groq/Llama</span><span class="stack-tag">SQLite</span>
+          <span class="stack-tag">Spring Boot</span><span class="stack-tag">FastAPI</span><span class="stack-tag">PostgreSQL</span><span class="stack-tag">Redis</span><span class="stack-tag">Docker</span><span class="stack-tag">GitHub Actions</span>
         </div>
-        <a href="https://github.com/AashishBedi/Eduverse_AI" target="_blank" class="project-link">⌥ View on GitHub →</a>
       </div>
 
-      <div class="project-card ac-purple">
+      <div class="project-card ac-purple" style="grid-column:1/-1">
         <div class="project-header">
-          <div class="project-title">Mitti Mantra</div>
-          <span class="project-badge b-hack">Top-5 Hackathon</span>
+          <div class="project-title">EduVerse AI - AI-Powered Learning Framework</div>
+          <span class="project-badge b-research">Feb 2026 - Apr 2026</span>
         </div>
-        <p class="project-desc">AI for sustainability project — built as Software Lead at the International AI Hackathon hosted by Canadian University Dubai. Achieved Top-5 finish among 250+ competing teams globally.</p>
+        <p class="project-desc">Designed a hybrid RAG pipeline routing queries dynamically across a ChromaDB vector store and a structured MySQL instance, generating a 40% improvement in retrieval response relevance. Implemented a data-ingestion and query backend serving responses in ~2s via Groq-hosted Llama inference.</p>
         <div class="project-stack">
-          <span class="stack-tag">Python</span><span class="stack-tag">FastAPI</span><span class="stack-tag">React.js</span><span class="stack-tag">ML</span>
+          <span class="stack-tag">Python</span><span class="stack-tag">FastAPI</span><span class="stack-tag">RAG</span><span class="stack-tag">ChromaDB</span><span class="stack-tag">MySQL</span><span class="stack-tag">React</span><span class="stack-tag">JWT</span>
         </div>
-        <a href="https://github.com/AashishBedi/Mittimantra" target="_blank" class="project-link">⌥ View on GitHub →</a>
-      </div>
-
-      <div class="project-card ac-teal">
-        <div class="project-header">
-          <div class="project-title">Zorvyn</div>
-          <span class="project-badge b-new">Active</span>
-        </div>
-        <p class="project-desc">An actively developed full-stack project built on a FastAPI and React stack — part of an expanding portfolio of production-grade AI-powered applications.</p>
-        <div class="project-stack">
-          <span class="stack-tag">FastAPI</span><span class="stack-tag">React.js</span><span class="stack-tag">Python</span>
-        </div>
-        <a href="https://github.com/AashishBedi/Zorvyn" target="_blank" class="project-link">⌥ View on GitHub →</a>
-      </div>
-
-      <div class="project-card ac-rose">
-        <div class="project-header">
-          <div class="project-title">Contract Document Review Bot</div>
-          <span class="project-badge b-nlp">NLP</span>
-        </div>
-        <p class="project-desc">An AI-powered bot for automated legal contract review — uses NLP and LLM capabilities to extract key clauses, flag risks, and summarise contract documents intelligently.</p>
-        <div class="project-stack">
-          <span class="stack-tag">Python</span><span class="stack-tag">NLP</span><span class="stack-tag">LLM</span><span class="stack-tag">FastAPI</span>
-        </div>
-        <a href="https://github.com/AashishBedi/Contract_Document_Review_Bot" target="_blank" class="project-link">⌥ View on GitHub →</a>
-      </div>
-
-      <div class="project-card ac-coral">
-        <div class="project-header">
-          <div class="project-title">MovieGold</div>
-          <span class="project-badge b-new">Web App</span>
-        </div>
-        <p class="project-desc">A full-stack movie discovery and browsing application — built with a modern frontend and backend stack for searching, exploring, and tracking films.</p>
-        <div class="project-stack">
-          <span class="stack-tag">React.js</span><span class="stack-tag">JavaScript</span><span class="stack-tag">REST API</span>
-        </div>
-        <a href="https://github.com/AashishBedi/MovieGold" target="_blank" class="project-link">⌥ View on GitHub →</a>
-      </div>
-
-      <div class="project-card ac-emerald">
-        <div class="project-header">
-          <div class="project-title">CLTV Prediction App</div>
-          <span class="project-badge b-ml">Hackathon · ML</span>
-        </div>
-        <p class="project-desc">Customer Lifetime Value prediction application built for the Vidhya Analytics Data Scientist Hiring Hackathon. End-to-end ML pipeline from feature engineering to model serving.</p>
-        <div class="project-stack">
-          <span class="stack-tag">Python</span><span class="stack-tag">Scikit-Learn</span><span class="stack-tag">Pandas</span><span class="stack-tag">ML Pipeline</span>
-        </div>
-        <a href="https://github.com/AashishBedi/CLTV_PredictionApp_VidhyaAnalyticsDataScientistHiringHackathon" target="_blank" class="project-link">⌥ View on GitHub →</a>
-      </div>
-
-      <div class="project-card ac-indigo">
-        <div class="project-header">
-          <div class="project-title">Movie Recommendation System</div>
-          <span class="project-badge b-ml">ML</span>
-        </div>
-        <p class="project-desc">A collaborative/content-based movie recommendation engine using similarity metrics and user preference modelling to surface personalised film suggestions.</p>
-        <div class="project-stack">
-          <span class="stack-tag">Python</span><span class="stack-tag">Scikit-Learn</span><span class="stack-tag">Pandas</span><span class="stack-tag">NumPy</span>
-        </div>
-        <a href="https://github.com/AashishBedi/Movie_Recommendation" target="_blank" class="project-link">⌥ View on GitHub →</a>
-      </div>
-
-      <div class="project-card ac-green" style="grid-column:1/-1">
-        <div class="project-header">
-          <div class="project-title">Forecasting — Big Data Analytics Pipeline</div>
-          <span class="project-badge b-bigdata">Internship</span>
-        </div>
-        <p class="project-desc">Apache Spark + Hive ETL pipelines centralising large-scale retail datasets into a Hadoop Data Lake, reducing data-to-insight latency by 20%. HBase integration for sub-second high-frequency metrics retrieval. Scikit-Learn forecasting models improving predictive accuracy by 15%.</p>
-        <div class="project-stack">
-          <span class="stack-tag">Apache Spark</span><span class="stack-tag">Hadoop</span><span class="stack-tag">Hive</span><span class="stack-tag">HBase</span><span class="stack-tag">Scikit-Learn</span><span class="stack-tag">Python</span><span class="stack-tag">SQL</span>
-        </div>
-        <a href="https://github.com/AashishBedi/Forecasting" target="_blank" class="project-link">⌥ View on GitHub →</a>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
   <div class="section-inner">
     <div class="section-label">Skills</div>
-    <div class="section-title">Technical toolkit</div>
+    <div class="section-title">Technical Toolkit</div>
     <div class="skills-grid">
       <div class="skill-category">
         <div class="skill-cat-title">Languages</div>
         <div class="skill-tags">
-          <span class="skill-tag st-blue">Python</span><span class="skill-tag st-blue">Java</span><span class="skill-tag st-blue">SQL</span>
+          <span class="skill-tag st-blue">Java</span><span class="skill-tag st-blue">Python</span><span class="skill-tag st-blue">SQL</span><span class="skill-tag st-blue">JavaScript</span>
         </div>
       </div>
       <div class="skill-category">
-        <div class="skill-cat-title">AI & ML</div>
+        <div class="skill-cat-title">Frameworks</div>
         <div class="skill-tags">
-          <span class="skill-tag st-gold">PyTorch</span><span class="skill-tag st-gold">TensorFlow</span><span class="skill-tag st-gold">RAG</span><span class="skill-tag st-gold">NLP</span><span class="skill-tag st-gold">Scikit-Learn</span><span class="skill-tag st-gold">LLMs</span><span class="skill-tag st-gold">Pandas</span><span class="skill-tag st-gold">NumPy</span>
+          <span class="skill-tag st-gold">Spring Boot</span><span class="skill-tag st-gold">Spring Security</span><span class="skill-tag st-gold">Spring Data JPA</span><span class="skill-tag st-gold">Hibernate</span><span class="skill-tag st-gold">FastAPI</span><span class="skill-tag st-gold">Django</span>
         </div>
       </div>
       <div class="skill-category">
-        <div class="skill-cat-title">Backend</div>
+        <div class="skill-cat-title">Tools & Databases</div>
         <div class="skill-tags">
-          <span class="skill-tag st-blue">FastAPI</span><span class="skill-tag st-blue">Spring Boot</span><span class="skill-tag st-blue">REST APIs</span><span class="skill-tag st-blue">JWT</span><span class="skill-tag st-blue">Spring Security</span>
+          <span class="skill-tag st-purple">Docker</span><span class="skill-tag st-purple">GitHub Actions</span><span class="skill-tag st-purple">Git</span><span class="skill-tag st-purple">Maven</span><span class="skill-tag st-purple">PostgreSQL</span><span class="skill-tag st-purple">Redis</span>
         </div>
       </div>
       <div class="skill-category">
-        <div class="skill-cat-title">Big Data</div>
+        <div class="skill-cat-title">Concepts</div>
         <div class="skill-tags">
-          <span class="skill-tag st-green">Apache Spark</span><span class="skill-tag st-green">Hadoop</span><span class="skill-tag st-green">Hive</span><span class="skill-tag st-green">HBase</span><span class="skill-tag st-green">ETL</span>
-        </div>
-      </div>
-      <div class="skill-category">
-        <div class="skill-cat-title">Databases</div>
-        <div class="skill-tags">
-          <span class="skill-tag st-purple">PostgreSQL</span><span class="skill-tag st-purple">Redis</span><span class="skill-tag st-purple">ChromaDB</span><span class="skill-tag st-purple">MongoDB</span><span class="skill-tag st-purple">SQLite</span>
-        </div>
-      </div>
-      <div class="skill-category">
-        <div class="skill-cat-title">DevOps & Tools</div>
-        <div class="skill-tags">
-          <span class="skill-tag st-blue">Docker</span><span class="skill-tag st-blue">GitHub Actions</span><span class="skill-tag st-blue">CI/CD</span><span class="skill-tag st-blue">Git</span><span class="skill-tag st-blue">React.js</span><span class="skill-tag st-blue">Tableau</span>
+          <span class="skill-tag st-green">OOP</span><span class="skill-tag st-green">System Design</span><span class="skill-tag st-green">Microservices</span><span class="skill-tag st-green">REST APIs</span><span class="skill-tag st-green">JWT Authentication</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CP -->
-<section>
-  <div class="section-inner">
-    <div class="section-label">Competitive Programming</div>
-    <div class="section-title">Coding profiles</div>
-    <div class="cp-grid">
-      <a class="cp-card" href="https://leetcode.com/u/ZeoRanger5/" target="_blank">
-        <div class="cp-logo">🟡</div>
-        <div class="cp-platform">LeetCode</div>
-        <div class="cp-stat">818+</div>
-        <div class="cp-sub">Problems Solved · Rank #37,432</div>
-        <div style="margin-top:8px;background:#dcfce7;color:#14532d;display:inline-block;padding:2px 10px;border-radius:20px;font-size:11px;font-weight:700">🔥 365-Day Badge</div>
-      </a>
-      <a class="cp-card" href="https://codeforces.com/profile/aashishbedi0" target="_blank">
-        <div class="cp-logo">🔵</div>
-        <div class="cp-platform">Codeforces</div>
-        <div class="cp-stat">54</div>
-        <div class="cp-sub">Problems Solved · Rating 357</div>
-      </a>
-      <a class="cp-card" href="https://www.hackerrank.com/profile/aashishbedi01" target="_blank">
-        <div class="cp-logo">🟢</div>
-        <div class="cp-platform">HackerRank</div>
-        <div class="cp-stat">Active</div>
-        <div class="cp-sub">aashishbedi01</div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-inner">
     <div class="section-label">Experience</div>
-    <div class="section-title">Work history</div>
+    <div class="section-title">Work History</div>
     <div class="exp-item">
-      <div class="exp-date">May – Jul 2024</div>
+      <div class="exp-date">May 2025 – Jul 2025</div>
       <div class="exp-content">
-        <div class="exp-role">Big Data & Analytics Engineer (Intern)</div>
-        <div class="exp-org">Lovely Professional University · Phagwara, Punjab</div>
+        <div class="exp-role">Python Fullstack Development Trainee</div>
+        <div class="exp-org">CipherSchools (University-Sponsored Project)</div>
         <ul class="exp-bullets">
-          <li>Engineered Apache Spark and Hive ETL pipelines, reducing data-to-insight latency by 20%</li>
-          <li>Optimised SQL queries for inventory and sales aggregation driving weekly restocking decisions</li>
-          <li>Trained Scikit-Learn forecasting models improving predictive accuracy by 15%</li>
-          <li>Integrated HBase as low-latency NoSQL store enabling sub-second high-frequency metrics retrieval</li>
+          <li>Completed a comprehensive full-stack engineering program focused on scalable web architecture, database modeling, and secure client-server data flow.</li>
+          <li>Developed and deployed robust web applications using Django and Django REST Framework, implementing MVC architectures and RESTful endpoints for efficient CRUD operations.</li>
+          <li>Engineered lightweight, low-latency API microservices with FastAPI to implement and evaluate asynchronous request handling.</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- AWARDS -->
 <section>
   <div class="section-inner">
     <div class="section-label">Recognition</div>
-    <div class="section-title">Awards & Publications</div>
+    <div class="section-title">Publications & Awards</div>
     <div class="awards-grid">
-      <div class="award-card">
-        <div class="award-icon" style="background:#fff8e8">🏆</div>
-        <div>
-          <div class="award-title">Top-5 / 250+ Teams — International AI Hackathon</div>
-          <div class="award-desc">AI for Sustainability, Canadian University Dubai (UAE). Led software development for Mitti Mantra as Software Lead.</div>
-        </div>
-      </div>
       <div class="award-card">
         <div class="award-icon" style="background:#e8f1ff">📄</div>
         <div>
-          <div class="award-title">3× Springer-Indexed Publications</div>
-          <div class="award-desc">"RoadMap: EduVerse AI Powered Learning Framework" — ICIDSSD 2026, Jamia Hamdard Delhi + 2 additional Springer-indexed conferences.</div>
+          <div class="award-title">Research Publications</div>
+          <div class="award-desc">"EduVerse AI: An Intent-Aware Hybrid Retrieval System for University Information Access" accepted at IEEE ACROSET 2026. 3 additional papers accepted at Springer-indexed conferences (including ICIDSSD 2026, Jamia Hamdard).</div>
+        </div>
+      </div>
+      <div class="award-card">
+        <div class="award-icon" style="background:#fff8e8">🏆</div>
+        <div>
+          <div class="award-title">Hackathon Top-5 Finisher</div>
+          <div class="award-desc">Placed top-5 among 250+ teams in the AI for Sustainability Hackathon (Canadian University, UAE). Served as ML/Software Lead to architect and deploy a predictive agricultural support system.</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="section-inner">
     <div class="section-label">Contact</div>
-    <div class="section-title">Let's build something</div>
-    <p>Actively seeking ML Engineering, AI Engineering, Data Science, or SDE roles.<br/>Feel free to reach out — I'd love to connect.</p>
+    <div class="section-title">Let's Connect</div>
+    <p>Actively looking for an entry-level Java Developer or Backend Software Engineer role.<br/>Feel free to get in touch!</p>
     <div class="contact-links">
       <a href="mailto:aashishbedi0@gmail.com" class="contact-link">✉ aashishbedi0@gmail.com</a>
-      <a href="https://linkedin.com/in/aashish-bedi-1a799b252" target="_blank" class="contact-link">in LinkedIn</a>
-      <a href="https://github.com/AashishBedi" target="_blank" class="contact-link">⌥ GitHub</a>
     </div>
   </div>
 </section>
